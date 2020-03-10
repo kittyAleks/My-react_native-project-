@@ -1,0 +1,4 @@
+$ git stash - спрятать изменения
+$ git checkout -b new_useless_feature - создать новую ветку
+$ git stash pop - вернуть спрятанные изменения
+_________________
