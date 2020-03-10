@@ -149,8 +149,8 @@ class App extends Component {
                             }}>
                                 <Image
                                     style={{ marginBottom: 15, marginLeft: 20,
-                                        width: 60,
-                                        height: 60,
+                                        width: 70,
+                                        height: 70,
                                         resizeMode: 'cover',
                                         borderRadius: 10,
                                         borderWidth: 1,
@@ -252,15 +252,20 @@ class App extends Component {
 هنا سوف تجد أي طبق على الإطلاق                        </Text>
                     </View>
                 </View>
+                <View>
                 <FlatList
                     horizontal
                     data={this.state.horizontalList}
+                    keyExtractor={(item, index) => item.key}
                     showsHorizontalScrollIndicator={false}
                     renderItem={ (row, sectionID, rowID) => this.renderHorizontalList(row.item, sectionID, rowID) }/>
-
+                </View>
+                <View style={{flex: 1}}>
                 <FlatList
                     data={this.state.restaurants}
+                    keyExtractor={(item, index) => item.key}
                     renderItem={ (row, sectionID, rowID) => this.renderItem(row.item, sectionID, rowID) }/>
+                </View>
 
                 <View style={{flexDirection: 'row', marginTop: 30}}>
                     <Button style={{
